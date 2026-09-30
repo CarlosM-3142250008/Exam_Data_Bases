@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artefacto de Salida - Bases de Datos | Carlos Lucero</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans leading-relaxed selection:bg-cyan-500 selection:text-slate-950">
+
+  <!-- Header -->
+  <header class="border-b border-slate-800 bg-slate-950/90 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+      <div>
+        <h1 class="text-xl font-bold text-cyan-400">Artefacto de Salida: Bases de Datos</h1>
+        <p class="text-xs text-slate-400">Carlos Miguel Lucero Ruiz — Grupo 4°B</p>
+      </div>
+      <span class="text-xs bg-cyan-950 text-cyan-300 border border-cyan-800/80 px-3 py-1 rounded-full font-mono">
+        PostgreSQL & DBeaver
+      </span>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-6 py-10 space-y-12">
+
+    <!-- Presentación del Alumno -->
+    <section class="bg-gradient-to-r from-slate-950 to-slate-900 border border-slate-800 p-8 rounded-2xl shadow-xl space-y-4">
+      <div class="inline-block bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-semibold px-3 py-1 rounded-full">
+        Documentación de Entregable
+      </div>
+      <h2 class="text-3xl font-extrabold text-white">Consolidación de Conocimientos Adquiridos</h2>
+      <p class="text-slate-300 text-base leading-relaxed">
+        Hola, soy <strong class="text-cyan-400">Carlos Miguel Lucero Ruiz</strong> del grupo <strong class="text-cyan-400">4°B</strong>. En esta página presento mi artefacto de salida, donde resumí los principios que aprendí durante las sesiones de clase sobre bases de datos, la diferencia entre los modelos relacionales y no relacionales, la configuración de un cliente administrativo como DBeaver y la creación práctica de esquemas y tablas utilizando PostgreSQL.
+      </p>
+    </section>
+
+    <!-- Módulo 1: Lo que Aprendí -->
+    <section class="space-y-6">
+      <h3 class="text-2xl font-bold text-slate-100 border-l-4 border-cyan-500 pl-3">1. Principios y Paradigmas de Bases de Datos</h3>
+      <p class="text-slate-300 text-sm">
+        Durante las sesiones revisamos los conceptos fundamentales para entender cómo se estructuran y almacenan los datos de manera eficiente. Comprendí las diferencias clave entre los dos grandes enfoques del mercado:
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-slate-800/40 p-6 rounded-xl border border-slate-700/60 space-y-3">
+          <div class="flex items-center space-x-2">
+            <div class="w-3 h-3 rounded-full bg-cyan-400"></div>
+            <h4 class="text-lg font-semibold text-cyan-300">Bases de Datos Relacionales (SQL)</h4>
+          </div>
+          <p class="text-sm text-slate-300">
+            Organizan la información en tablas compuestas por filas y columnas bien estructuradas. Se caracterizan por mantener un esquema rígido y asegurar la consistencia mediante relaciones directas y claves primarias.
+          </p>
+          <ul class="text-xs text-slate-400 space-y-1 list-disc list-inside pt-2 border-t border-slate-700/50">
+            <li>Ejemplos vistos: PostgreSQL, MySQL.</li>
+            <li>Enfoque: Estructura previa definida con lenguaje DDL.</li>
+          </ul>
+        </div>
+
+        <div class="bg-slate-800/40 p-6 rounded-xl border border-slate-700/60 space-y-3">
+          <div class="flex items-center space-x-2">
+            <div class="w-3 h-3 rounded-full bg-emerald-400"></div>
+            <h4 class="text-lg font-semibold text-emerald-300">Bases de Datos No Relacionales (NoSQL)</h4>
+          </div>
+          <p class="text-sm text-slate-300">
+            Diseñadas para trabajar con estructuras flexibles o datos semiestructurados (como documentos JSON, clave-valor o grafos). Permiten almacenar información sin necesidad de definir un esquema fijo previo.
+          </p>
+          <ul class="text-xs text-slate-400 space-y-1 list-disc list-inside pt-2 border-t border-slate-700/50">
+            <li>Ejemplos destacados: MongoDB, Redis.</li>
+            <li>Enfoque: Escalabilidad horizontal y flexibilidad de datos.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Módulo 2: Práctica DDL en PostgreSQL y DBeaver -->
+    <section class="space-y-6">
+      <h3 class="text-2xl font-bold text-slate-100 border-l-4 border-cyan-500 pl-3">2. Práctica: Manejo de DBeaver y Creación de Tablas en PostgreSQL</h3>
+      <p class="text-slate-300 text-sm">
+        Puse en práctica lo aprendido conectándome a PostgreSQL desde el entorno gráfico de <strong>DBeaver</strong>. Escribí los scripts SQL básicos para crear una base de datos y construir tablas asignando sus respectivos tipos de datos y restricciones clave (<code class="text-cyan-400 font-mono">PRIMARY KEY</code>, <code class="text-cyan-400 font-mono">NOT NULL</code>, <code class="text-cyan-400 font-mono">UNIQUE</code>).
+      </p>
+
+      <div class="bg-slate-950 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
+        <div class="bg-slate-900 px-4 py-2 border-b border-slate-800 flex justify-between items-center text-xs text-slate-400 font-mono">
+          <span>Script SQL — DBeaver (PostgreSQL)</span>
+          <span class="text-slate-500">ddl_inicial.sql</span>
+        </div>
+        <pre><code class="language-sql">-- Creación de la base de datos para la práctica
+CREATE DATABASE tienda_escolar;
+
+-- Creación de la tabla de Categorías
+CREATE TABLE categorias (
+    id_categoria SERIAL PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL UNIQUE
+);
+
+-- Creación de la tabla de Productos
+CREATE TABLE productos (
+    id_producto SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    precio NUMERIC(8, 2) NOT NULL CHECK (precio >= 0),
+    stock INT DEFAULT 0
+);
+        </code></pre>
+      </div>
+    </section>
+
+    <!-- Módulo 3: Profundización -->
+    <section class="space-y-6 bg-slate-800/30 p-8 rounded-2xl border border-cyan-900/40">
+      <div class="flex items-center space-x-3">
+        <span class="bg-cyan-500/20 text-cyan-300 text-xs font-bold px-2.5 py-1 rounded border border-cyan-500/30">
+          TEMÁTICA DE PROFUNDIZACIÓN
+        </span>
+        <h3 class="text-xl font-bold text-white">Relación entre Tablas mediante Claves Foráneas (Foreign Keys)</h3>
+      </div>
+      <p class="text-slate-300 text-sm">
+        Para profundizar más allá de la creación de tablas individuales, investigué cómo conectar dos entidades mediante llaves foráneas (<code class="text-cyan-400 font-mono">FOREIGN KEY</code>). Esto permite mantener la integridad referencial de los datos y evitar registros huérfanos en el sistema.
+      </p>
+
+      <div class="bg-slate-950 rounded-xl overflow-hidden border border-slate-800">
+        <pre><code class="language-sql">-- Vinculación de Productos con Categorías (Relación 1:N)
+ALTER TABLE productos 
+ADD COLUMN id_categoria INT,
+ADD CONSTRAINT fk_categoria_producto 
+FOREIGN KEY (id_categoria) REFERENCES categorias(id_categoria)
+ON DELETE SET NULL;
+
+-- Inserción de prueba para verificar la relación
+INSERT INTO categorias (nombre) VALUES ('Papelería');
+
+INSERT INTO productos (nombre, precio, stock, id_categoria) 
+VALUES ('Cuaderno Profesional 100 Hojas', 35.50, 50, 1);
+        </code></pre>
+      </div>
+    </section>
+
+    <!-- Módulo 4: Reflexión de Aprendizaje -->
+    <section class="space-y-6">
+      <h3 class="text-2xl font-bold text-slate-100 border-l-4 border-cyan-500 pl-3">3. Reflexión Personal sobre la Clase</h3>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        
+        <!-- Lo que aprendí -->
+        <div class="bg-slate-800/40 border border-slate-700/50 p-6 rounded-xl space-y-3">
+          <div class="flex items-center space-x-2 text-cyan-400 font-semibold text-lg">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <h4>¿Qué aprendí?</h4>
+          </div>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Comprendí la lógica detrás de la estructuración de datos en un gestor relacional. Aprendí a configurar la conexión en DBeaver, ejecutar comandos SQL básicos para definir tipos de datos adecuados y estructurar la información mediante tablas bien definidas.
+          </p>
+        </div>
+
+        <!-- Lo que me gustó -->
+        <div class="bg-slate-800/40 border border-slate-700/50 p-6 rounded-xl space-y-3">
+          <div class="flex items-center space-x-2 text-emerald-400 font-semibold text-lg">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <h4>¿Qué me gustó?</h4>
+          </div>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Lo que más me gustó fue la transición de la teoría a la práctica: usar DBeaver para ejecutar scripts SQL y ver en tiempo real cómo PostgreSQL crea la estructura física de la base de datos. Se sintió muy directo e intuitivo.
+          </p>
+        </div>
+
+        <!-- Lo que me gustaría reforzar -->
+        <div class="bg-slate-800/40 border border-slate-700/50 p-6 rounded-xl space-y-3">
+          <div class="flex items-center space-x-2 text-amber-400 font-semibold text-lg">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            <h4>¿Qué deseo reforzar?</h4>
+          </div>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Me gustaría reforzar las consultas de manipulación de datos de nivel intermedio, especialmente el uso de diferentes tipos de <code class="text-amber-300 font-mono">JOIN</code> para cruzar información entre varias tablas y el uso de subconsultas avanzadas.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-6 text-center text-xs text-slate-500">
+    <p>Artefacto de Salida — Entregable para la Asignatura de Bases de Datos</p>
+    <p class="mt-1 text-slate-600">Carlos Miguel Lucero Ruiz | Grupo 4°B</p>
+  </footer>
+
+</body>
+</html>
